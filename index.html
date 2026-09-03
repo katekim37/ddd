@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>우리 사이 야생</title>
+    <!-- 귀엽고 둥근 손글씨 느낌의 폰트 'Jua' 적용 -->
+    <link href="https://fonts.googleapis.com/css2?family=Jua&display=swap" rel="stylesheet">
+    
+    <style>
+        :root {
+            --bg-color: #FFF9F2; /* 따뜻한 크림색 단색 배경 (그라디언트 X) */
+            --text-color: #4A3C31; 
+            --accent-color: #6EB28A; 
+            --card-bg: #FFFFFF; 
+            --kakao-color: #FEE500; 
+            --kakao-text: #3A1D1D; 
+        }
+
+        body {
+            font-family: 'Jua', sans-serif;
+            background-color: var(--bg-color);
+            color: var(--text-color);
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center; /* 모바일 뷰 중앙 정렬 */
+            line-height: 1.5;
+        }
+
+        .container {
+            width: 100%;
+            max-width: 480px; 
+            background-color: var(--bg-color);
+            min-height: 100vh;
+            padding: 40px 20px 100px; /* 하단 고정 버튼 공간 확보 */
+            box-sizing: border-box;
+            position: relative;
+        }
+
+        h1, h2, h3, p {
+            margin: 0;
+            word-break: keep-all; 
+        }
+
+        /* 1. 히어로 섹션 */
+        .hero {
+            text-align: center;
+            margin-bottom: 40px;
+            padding-top: 10px;
+        }
+        .hero p.sub-headline {
+            font-size: 18px;
+            color: var(--accent-color);
+            margin-bottom: 12px;
+        }
+        .hero h1 {
+            font-size: 28px;
+            color: var(--text-color);
+            line-height: 1.4;
+        }
+
+        /* 2. 제품 소개 섹션 */
+        .intro {
+            background-color: var(--card-bg);
+            border-radius: 20px;
+            padding: 30px 20px;
+            text-align: center;
+            margin-bottom: 40px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.03); 
+        }
+        .intro h2 {
+            font-size: 22px;
+            margin-bottom: 15px;
+        }
+        .intro p {
+            font-size: 17px;
+            color: #6B5B50;
+        }
+
+        /* 3. 핵심 특징 3가지 섹션 */
+        .features {
+            margin-bottom: 30px;
+        }
+        .features h2 {
+            font-size: 20px;
+            text-align: center;
+            margin-bottom: 20px;
+            color: var(--text-color);
+        }
+        .features ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+        }
+        .features li {
+            background-color: var(--card-bg);
+            border-radius: 16px;
+            padding: 20px;
+            display: flex;
+            flex-direction: column;
+            gap: 5px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.03);
+        }
+        .features li h3 {
+            font-size: 19px;
+            color: var(--accent-color);
+        }
+        .features li p {
+            font-size: 16px;
+            color: #6B5B50;
+        }
+
+        /* 4. CTA 버튼 섹션 */
+        .cta-section {
+            position: fixed;
+            bottom: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 100%;
+            max-width: 480px;
+            padding: 15px 20px;
+            box-sizing: border-box;
+            background-color: var(--bg-color); 
+            z-index: 100;
+        }
+        .cta-button {
+            display: block;
+            width: 100%;
+            background-color: var(--kakao-color);
+            color: var(--kakao-text);
+            text-align: center;
+            text-decoration: none;
+            font-size: 20px;
+            padding: 16px 0;
+            border-radius: 14px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+            transition: transform 0.1s ease-in-out;
+        }
+        .cta-button:active {
+            transform: scale(0.97); 
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <!-- 1. 히어로: 헤드라인 -->
+        <header class="hero">
+            <p class="sub-headline">보이는 모습이 전부는 아니니까 🌿</p>
+            <h1>처음 본 모습 말고,<br>알고 난 뒤의 너는<br>어떤 동물이야?</h1>
+        </header>
+
+        <!-- 2. 제품 소개: 한 줄 소개 -->
+        <section class="intro">
+            <h2>우리 사이 야생 🦍</h2>
+            <p>무뚝뚝해 보이지만 세심한 고릴라,<br>자유로워 보이지만 눈치 보는 말.<br><br>알고 보면 우리와 꼭 닮은<br>야생동물 친구들을 만나보세요!</p>
+        </section>
+
+        <!-- 3. 핵심 특징 3가지 -->
+        <section class="features">
+            <h2>우리가 특별한 3가지 이유 ✨</h2>
+            <ul>
+                <li>
+                    <h3>🔍 진짜 내 모습 발견</h3>
+                    <p>의외의 동물 특성에서 나와 꼭 닮은 모습을 찾아봐요.</p>
+                </li>
+                <li>
+                    <h3>💬 쉬운 감정 표현</h3>
+                    <p>말하기 어려운 속마음, 캐릭터의 큰 몸짓으로 유쾌하게 전할 수 있어요.</p>
+                </li>
+                <li>
+                    <h3>🤝 관계의 연결과 공유</h3>
+                    <p>"넌 공작새, 난 고릴라!" 다름을 인정하고 즐기는 귀여운 관계성 놀이.</p>
+                </li>
+            </ul>
+        </section>
+
+        <!-- 4. 문의 CTA 버튼 -->
+        <div class="cta-section">
+            <a href="#" class="cta-button" id="kakaoBtn">카카오톡으로 문의하기</a>
+        </div>
+    </div>
+
+    <!-- 버튼 클릭 이벤트 처리 JS -->
+    <script>
+        document.addEventListener("DOMContentLoaded", () => {
+            const btn = document.getElementById("kakaoBtn");
+            btn.addEventListener("click", (e) => {
+                e.preventDefault(); 
+                alert("야생 친구들이 기다려요 🦍💛\n카카오톡 채널로 이동합니다!");
+            });
+        });
+    </script>
+</body>
+</html>
